@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-argo-app
+spec:
+  destination:
+    name: ''
+    namespace:
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: manifests
+    repoURL: https://shaekhhasanshoron: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@github.com/shaekhhasanshoron/demo-app.git
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
