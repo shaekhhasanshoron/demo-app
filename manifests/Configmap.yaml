@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  GIT_COMMIT: 51994bb3947606027f52601b479ebb78c7d230b9
+kind: ConfigMap
+metadata:
+  labels:
+    app: demo-app
+    companyId: 63f764e60716126cdd6b7967
+  name: envar-config-demo-app
+  namespace: ultra-edge
